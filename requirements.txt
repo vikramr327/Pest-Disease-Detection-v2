@@ -333,7 +333,6 @@ promise==2.3
 prompt_toolkit==3.0.47
 prophet==1.1.5
 proto-plus==1.24.0
-protobuf==3.20.3
 psutil==5.9.5
 ptyprocess==0.7.0
 pure_eval==0.2.3
