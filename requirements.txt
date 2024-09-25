@@ -275,7 +275,6 @@ numba==0.60.0
 numexpr==2.10.1
 numpy==1.26.4
 nvidia-cublas-cu12==12.6.1.4
-nvidia-cuda-cupti-cu12==12.6.68
 nvidia-cuda-nvcc-cu12==12.6.68
 nvidia-cudnn-cu12==9.4.0.58
 nvidia-cufft-cu12==11.2.6.59
