@@ -297,7 +297,6 @@ prettytable==3.11.0
 proglog==0.1.10
 progressbar2==4.5.0
 prometheus_client==0.21.0
-promise==2.3
 prompt_toolkit==3.0.47
 prophet==1.1.5
 proto-plus==1.24.0
