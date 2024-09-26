@@ -344,7 +344,7 @@ python-slugify==8.0.4
 python-utils==3.8.2
 pytz==2024.2
 pyviz_comms==3.0.3
-pyzmq==22.2.0
+pyzmq==26.2.0 --hash=sha256:90e9325797f7abf2dc9aa9714ee1a2cc9a2080c0742376a4a9af5de763df862d
 PyYAML==6.0.2
 qdldl==0.1.7.post4
 ratelim==0.1.6
