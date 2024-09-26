@@ -218,7 +218,6 @@ lightgbm==4.5.0
 linkify-it-py==2.0.3
 llvmlite==0.43.0
 locket==1.0.0
-logical-unification==0.4.6
 lxml==4.9.4
 marisa-trie==1.2.0
 Markdown==3.7
