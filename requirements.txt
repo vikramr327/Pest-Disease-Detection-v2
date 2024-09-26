@@ -280,7 +280,6 @@ parsy==2.1
 partd==1.4.2
 pathlib==1.0.1
 patsy==0.5.6
-peewee==3.17.6
 pexpect==4.9.0
 pickleshare==0.7.5
 pillow==10.4.0
