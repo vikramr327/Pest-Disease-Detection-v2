@@ -367,7 +367,7 @@ python-utils==3.8.2
 pytz==2024.2
 pyviz_comms==3.0.3
 PyYAML==6.0.2
-pyzmq==24.0.1
+pyzmq==22.3.0 --only-binary=:all:
 qdldl==0.1.7.post4
 ratelim==0.1.6
 referencing==0.35.1
