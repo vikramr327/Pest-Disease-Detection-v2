@@ -292,7 +292,6 @@ pluggy==1.5.0
 polars==1.6.0
 pooch==1.8.2
 portpicker==1.5.2
-prefetch_generator==1.0.3
 preshed==3.0.9
 prettytable==3.11.0
 proglog==0.1.10
