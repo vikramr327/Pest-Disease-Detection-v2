@@ -472,7 +472,6 @@ toml==0.10.2
 tomli==2.0.1
 toolz==0.12.1
 torchsummary==1.5.1
-torchvision @ https://download.pytorch.org/whl/cu121_full/torchvision-0.19.1%2Bcu121-cp310-cp310-linux_x86_64.whl#sha256=b8cc4bf381b75522995b601e07a1b433b5fd925dc3e34a7fa6cd22f449d65379
 tornado==6.3.3
 tqdm==4.66.5
 traitlets==5.7.1
