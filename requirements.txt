@@ -3,4 +3,5 @@ joblib>=1.2.0
 pandas>=2.0.0
 numpy>=1.23.5
 opencv-python-headless>=4.7.0
+torch>=2.0.0
 
