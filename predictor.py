@@ -38,7 +38,7 @@ def make_prediction(input_image):
   categories = ['Cashew anthracnose', 'Cashew gumosis', 'Cashew healthy',
   'Cashew leaf miner', 'Cashew red rust', 'Cassava bacterial blight',
   'Cassava brown spot', 'Cassava green mite', 'Cassava healthy',
-  'Cassava mosaic', 'Maize fall armyworm', 'Maize grasshoper', 'Maize healthy',
+  'Cassava mosaic', 'Maize fall armyworm', 'Maize grasshopper', 'Maize healthy',
   'Maize leaf beetle', 'Maize leaf blight', 'Maize leaf spot',
   'Maize streak virus', 'Tomato healthy', 'Tomato leaf blight',
   'Tomato leaf curl', 'Tomato septoria leaf spot', 'Tomato verticulium wilt',
