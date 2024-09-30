@@ -8,7 +8,10 @@ import streamlit as st
 
 # print(categories[pred])
 def make_prediction(input_image):
-  myModel = load('DiseaseDetectionEpoch7.joblib')
+  myModel = torch.load('DiseaseDetectionEpoch73.pth', map_location=torch.device('cpu'))
+
+  
+
   #myModel.eval()  # Set model to evaluation mode #temp
   st.write ("Model uploaded!") # You may remove this in your finalized web app!
   input_resized = cv2.resize(input_image, (128, 128))
