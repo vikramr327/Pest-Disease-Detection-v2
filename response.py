@@ -1,8 +1,8 @@
 import streamlit as st
 import openai
 def get_app_response(prediction):
-    st.write(f"**Predicted Plant Disease or Pest:** {prediction}")
-
+    #st.write(f"Predicted Plant Disease or Pest: {prediction}")
+    st.markdown(f"<p style='font-size:17px'><strong>Predicted Plant Disease or Pest: {prediction}<strong></p>", unsafe_allow_html=True)
     # Set your OpenAI API key
     if "OPENAI_API_SERVICE_KEY" in st.secrets:
         openai.api_key = st.secrets["OPENAI_API_SERVICE_KEY"]
@@ -10,7 +10,7 @@ def get_app_response(prediction):
         st.error("API Key not found. Please configure the OPENAI_API_KEY in Streamlit Secrets.")
 
     # Construct the user prompt
-    st.markdown(f"<p style='font-size:20px'>**General Information about '{prediction}'**</p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='font-size:17px'><strong>*General Information about '{prediction}'*<strong></p>", unsafe_allow_html=True)
     #st.write(f"**General Information about '{prediction}'**")
     user_message = f"Please provide general information, causes, remedies, and where they appear for '{prediction}' and limit output to 100 words"
     # Append the user message to the messages list
