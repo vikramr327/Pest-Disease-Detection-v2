@@ -24,6 +24,12 @@ def create_background(color: str, text_color: str = None, h1_color: str = None, 
 
 
 def create_header():
-  st.title("Pest Detection")
-  st.header("By Vikram Anand")
-  st.subheader("Insert an image to see if your plant has a disease!")
+    st.markdown(
+        """
+        <h1 style='margin-bottom: 0; text-align: center;'>Plant Disease and Pest Detection</h1>
+        <h2 style='margin-top: 0; text-align: center;'>By Vikram Anand</h2>
+        <h5 style='text-align: center;'>This application utilizes image detection and integrates AI in order to identify a pest or disease from over 35 trained categories</h5>
+        <h5 style='text-align: center;'>Upload a clear image to see if your plant has a disease or pest!</h5>
+        """,
+        unsafe_allow_html=True
+    )
