@@ -4,7 +4,7 @@ def get_app_response(prediction):
     st.write(f"Predicted Plant Disease or Pest: {prediction}")
 
     # Set your OpenAI API key
-    openai.api_key = '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'
+    openai.api_key = st.secrets["OPENAI_API_KEY"]
 
     # Construct the user prompt
     st.write(f"General Information about '{prediction}'")
