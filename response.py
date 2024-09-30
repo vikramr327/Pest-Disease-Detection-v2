@@ -25,8 +25,8 @@ def get_app_response(prediction):
             model="gpt-3.5-turbo", 
             messages=messages
         )
-   # except openai.error.RateLimitError:
-   #     st.write("Rate limit exceeded. Please try again later.")
+    except openai.error.RateLimitError:
+        st.write("Rate limit exceeded. Please try again later.")
     except Exception as e:
         st.write(f"An error occurred: {str(e)}")
         
