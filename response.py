@@ -19,15 +19,15 @@ def get_app_response(prediction):
     ]
 
     # Make the API request to ChatGPT
-    #try:
-    #    chat = openai.ChatCompletion.create(
-   #         model="gpt-3.5-turbo", 
-   #         messages=messages
-   #     )
+    try:
+        chat = openai.ChatCompletion.create(
+            model="gpt-3.5-turbo", 
+            messages=messages
+        )
    # except openai.error.RateLimitError:
    #     st.write("Rate limit exceeded. Please try again later.")
-   # except Exception as e:
-  #      st.write(f"An error occurred: {str(e)}")
+    except Exception as e:
+        st.write(f"An error occurred: {str(e)}")
         
    # reply = chat.choices[0].message.content
     #st.write(f"{reply}")  # Display the reply in Streamlit
