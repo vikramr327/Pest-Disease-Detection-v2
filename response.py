@@ -6,6 +6,7 @@ def get_app_response(prediction):
     # Set your OpenAI API key
     if "OPENAI_API_KEY" in st.secrets:
         openai.api_key = st.secrets["OPENAI_API_KEY"]
+        st.write(openai.api_key)
     else:
         st.error("API Key not found. Please configure the OPENAI_API_KEY in Streamlit Secrets.")
 
