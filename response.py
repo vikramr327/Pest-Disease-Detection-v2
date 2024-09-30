@@ -5,7 +5,7 @@ def get_app_response(prediction):
 
     # Set your OpenAI API key
     if "OPENAI_API_KEY" in st.secrets:
-        openai.api_key = st.secrets["OPENAI_API_KEY1"]
+        openai.api_key = st.secrets["OPENAI_API_KEY"]
     else:
         st.error("API Key not found. Please configure the OPENAI_API_KEY in Streamlit Secrets.")
 
@@ -29,6 +29,6 @@ def get_app_response(prediction):
     except Exception as e:
         st.write(f"An error occurred: {str(e)}")
         
-    reply = chat.choices[0].message.content
-    st.write(f"{reply}")  # Display the reply in Streamlit
-    messages.append({"role": "assistant", "content": reply})
+   # reply = chat.choices[0].message.content
+    #st.write(f"{reply}")  # Display the reply in Streamlit
+   # messages.append({"role": "assistant", "content": reply})
