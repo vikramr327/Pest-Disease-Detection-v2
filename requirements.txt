@@ -1,1 +1,29 @@
+# Force pip to use precompiled wheels to avoid issues with C extensions
+--only-binary :all:
 
+# Core framework for the web app
+streamlit==1.10.0
+
+# Machine learning libraries (choose TensorFlow or PyTorch, not both)
+tensorflow==2.9.1  # If using TensorFlow
+# torch==1.12.1+cpu  # If using PyTorch
+
+# Numerical and data processing
+numpy==1.21.6
+pandas==1.3.5
+scikit-learn==0.24.2
+scipy==1.7.3
+
+# Image processing
+Pillow==8.4.0
+opencv-python-headless==4.5.5.64  # Headless version for image processing
+
+# Visualization (optional)
+matplotlib==3.4.3
+
+# HTTP requests (optional, for API interactions)
+requests==2.26.0
+
+# Ensures proper installation of dependencies
+setuptools>=58.0.0
+wheel>=0.36.0
