@@ -33,7 +33,7 @@ def make_prediction(input_image):
   pred = np.argmax(pred.cpu().detach().numpy())
   # Output the predicted class
   #st.write(input_tensor)  # Check the preprocessed input tensor
-  st.write(f"Predicted class: {pred}")
+  #st.write(f"Predicted class: {pred}")
 
   categories = ['Cashew anthracnose', 'Cashew gumosis', 'Cashew healthy',
   'Cashew leaf miner', 'Cashew red rust', 'Cassava bacterial blight',
