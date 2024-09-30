@@ -1,29 +1,2056 @@
-# Force pip to use precompiled wheels to avoid issues with C extensions
---only-binary :all:
-
-# Core framework for the web app
-streamlit==1.10.0
-
-# Machine learning libraries (choose TensorFlow or PyTorch, not both)
-tensorflow==2.9.1  # If using TensorFlow
-# torch==1.12.1+cpu  # If using PyTorch
-
-# Numerical and data processing
-numpy==1.21.6
-pandas==1.3.5
+absl-py==1.4.0
+    # via
+    #   -r /backend-container/containers/requirements.core.in
+    #   array-record
+    #   chex
+    #   dopamine-rl
+    #   etils
+    #   keras
+    #   optax
+    #   orbax-checkpoint
+    #   tensorboard
+    #   tensorflow
+    #   tensorflow-datasets
+    #   tensorflow-metadata
+    #   tensorflow-probability
+    #   tf-slim
+accelerate==0.34.2
+    # via -r /backend-container/containers/requirements.user.in
+aiohappyeyeballs==2.4.0
+    # via aiohttp
+aiohttp==3.10.5
+    # via gcsfs
+aiosignal==1.3.1
+    # via aiohttp
+alabaster==0.7.16
+    # via sphinx
+albucore==0.0.16
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   albumentations
+albumentations==1.4.15
+    # via -r /backend-container/containers/requirements.in
+altair==4.2.2
+    # via -r /backend-container/containers/requirements.user.in
+annotated-types==0.7.0
+    # via pydantic
+anyio==3.7.1
+    # via jupyter-server
+argon2-cffi==23.1.0
+    # via
+    #   jupyter-server
+    #   notebook
+argon2-cffi-bindings==21.2.0
+    # via argon2-cffi
+array-record==0.5.1
+    # via tensorflow-datasets
+arviz==0.19.0
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   pymc
+astropy==6.1.3
+    # via -r /backend-container/containers/requirements.in
+astropy-iers-data==0.2024.9.16.0.32.21
+    # via astropy
+astunparse==1.6.3
+    # via tensorflow
+async-timeout==4.0.3
+    # via aiohttp
+atpublic==4.1.0
+    # via ibis-framework
+attrs==24.2.0
+    # via
+    #   aiohttp
+    #   jsonschema
+    #   referencing
+audioread==3.0.1
+    # via librosa
+autograd==1.7.0
+    # via -r /backend-container/containers/requirements.in
+babel==2.16.0
+    # via sphinx
+backcall==0.2.0
+    # via ipython
+beautifulsoup4==4.12.3
+    # via
+    #   -r /backend-container/containers/requirements.user.in
+    #   gdown
+    #   google
+    #   nbconvert
+    #   yfinance
+bigframes==1.18.0
+    # via -r /backend-container/containers/requirements.in
+bigquery-magics==0.2.0
+    # via -r /backend-container/containers/requirements.in
+bleach==6.1.0
+    # via
+    #   kaggle
+    #   nbconvert
+    #   panel
+blis==0.7.11
+    # via thinc
+blosc2==2.0.0
+    # via tables
+bokeh==3.4.3
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   holoviews
+    #   panel
+bqplot==0.12.43
+    # via geemap
+branca==0.7.2
+    # via
+    #   datascience
+    #   folium
+    #   ipyleaflet
+cachecontrol==0.14.0
+    # via firebase-admin
+cachetools==5.5.0
+    # via
+    #   cudf-cu12
+    #   google-auth
+    #   pymc
+catalogue==2.0.10
+    # via
+    #   spacy
+    #   srsly
+    #   thinc
+certifi==2024.8.30
+    # via
+    #   kaggle
+    #   pyogrio
+    #   pyproj
+    #   requests
+cffi==1.17.1
+    # via
+    #   argon2-cffi-bindings
+    #   cryptography
+    #   rpy2
+    #   soundfile
+chardet==5.2.0
+    # via music21
+charset-normalizer==3.3.2
+    # via requests
+chex==0.1.86
+    # via optax
+clarabel==0.9.0
+    # via cvxpy
+click==8.1.7
+    # via
+    #   dask
+    #   distributed
+    #   flask
+    #   geocoder
+    #   nltk
+    #   tensorflow-datasets
+    #   typer
+cloudpathlib==0.19.0
+    # via weasel
+cloudpickle==2.2.1
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   bigframes
+    #   dask
+    #   distributed
+    #   gym
+    #   hyperopt
+    #   pymc
+    #   tensorflow-probability
+cmake==3.30.3
+    # via -r /backend-container/containers/requirements.in
+cmdstanpy==1.2.4
+    # via prophet
+colorcet==3.1.0
+    # via holoviews
+colorlover==0.3.0
+    # via cufflinks
+colour==0.1.5
+    # via geemap
+community==1.0.0b1
+    # via -r /backend-container/containers/requirements.in
+confection==0.1.5
+    # via
+    #   thinc
+    #   weasel
+cons==0.4.6
+    # via
+    #   etuples
+    #   minikanren
+    #   pytensor
+contextlib2==21.6.0
+    # via -r /backend-container/containers/requirements.in
+contourpy==1.3.0
+    # via
+    #   bokeh
+    #   matplotlib
+cryptography==43.0.1
+    # via
+    #   pyjwt
+    #   pyopenssl
+cuda-python==12.2.1
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   cudf-cu12
+    #   rmm-cu12
+cudf-cu12 @ https://pypi.nvidia.com/cudf-cu12/cudf_cu12-24.4.1-cp310-cp310-manylinux_2_28_x86_64.whl
+    # via -r /backend-container/containers/requirements.in
+cufflinks==0.17.3
+    # via -r /backend-container/containers/requirements.in
+cupy-cuda12x==12.2.0
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   cudf-cu12
+cvxopt==1.3.2
+    # via -r /backend-container/containers/requirements.in
+cvxpy==1.5.3
+    # via -r /backend-container/containers/requirements.in
+cycler==0.12.1
+    # via
+    #   matplotlib
+    #   yellowbrick
+cymem==2.0.8
+    # via
+    #   preshed
+    #   spacy
+    #   thinc
+cython==3.0.11
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   cuda-python
+    #   tables
+dask==2024.8.0
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   distributed
+datascience==0.17.6
+    # via -r /backend-container/containers/requirements.in
+db-dtypes==1.3.0
+    # via
+    #   bigquery-magics
+    #   google-cloud-bigquery
+    #   ibis-framework
+    #   pandas-gbq
+debugpy==1.6.6
+    # via -r /backend-container/containers/requirements.core.in
+decorator==4.4.2
+    # via
+    #   gcsfs
+    #   ipyparallel
+    #   ipython
+    #   librosa
+    #   moviepy
+    #   ratelim
+    #   tensorflow-probability
+defusedxml==0.7.1
+    # via nbconvert
+distributed==2024.8.0
+    # via -r /backend-container/containers/requirements.in
+dlib==19.24.2
+    # via -r /backend-container/containers/requirements.in
+dm-tree==0.1.8
+    # via
+    #   arviz
+    #   tensorflow-datasets
+    #   tensorflow-probability
+docstring-parser==0.16
+    # via
+    #   google-cloud-aiplatform
+    #   simple-parsing
+docutils==0.18.1
+    # via sphinx
+dopamine-rl==4.0.9
+    # via -r /backend-container/containers/requirements.user.in
+duckdb==1.1.0
+    # via -r /backend-container/containers/requirements.in
+earthengine-api==1.0.0
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   eerepr
+    #   geemap
+easydict==1.13
+    # via -r /backend-container/containers/requirements.in
+ecos==2.0.14
+    # via cvxpy
+editdistance==0.8.1
+    # via -r /backend-container/containers/requirements.in
+eerepr==0.0.4
+    # via geemap
+einops==0.8.0
+    # via -r /backend-container/containers/requirements.in
+entrypoints==0.4
+    # via
+    #   altair
+    #   ipyparallel
+    #   nbconvert
+et-xmlfile==1.1.0
+    # via openpyxl
+etils[array-types,enp,epath,epy,etqdm,etree]==1.9.4
+    # via
+    #   array-record
+    #   optax
+    #   orbax-checkpoint
+    #   tensorflow-datasets
+etuples==0.3.9
+    # via
+    #   minikanren
+    #   pytensor
+eval-type-backport==0.2.0
+    # via albumentations
+exceptiongroup==1.2.2
+    # via
+    #   anyio
+    #   pytest
+fastai==2.7.17
+    # via -r /backend-container/containers/requirements.user.in
+fastcore==1.7.8
+    # via
+    #   fastai
+    #   fastdownload
+fastdownload==0.0.7
+    # via fastai
+fastjsonschema==2.20.0
+    # via nbformat
+fastprogress==1.0.3
+    # via
+    #   fastai
+    #   fastdownload
+fastrlock==0.8.2
+    # via cupy-cuda12x
+filelock==3.16.1
+    # via
+    #   gdown
+    #   huggingface-hub
+    #   pytensor
+    #   torch
+    #   transformers
+firebase-admin==6.5.0
+    # via -r /backend-container/containers/requirements.in
+flask==2.2.5
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   community
+flatbuffers==24.3.25
+    # via tensorflow
+flax==0.8.5
+    # via
+    #   -r /backend-container/containers/requirements.user.in
+    #   dopamine-rl
+folium==0.17.0
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   datascience
+    #   geemap
+fonttools==4.53.1
+    # via matplotlib
+frozendict==2.4.4
+    # via yfinance
+frozenlist==1.4.1
+    # via
+    #   aiohttp
+    #   aiosignal
+fsspec==2024.6.1
+    # via
+    #   bigframes
+    #   cudf-cu12
+    #   dask
+    #   etils
+    #   gcsfs
+    #   huggingface-hub
+    #   torch
+future==1.0.0
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   geocoder
+    #   hyperopt
+gast==0.6.0
+    # via
+    #   tensorflow
+    #   tensorflow-probability
+gcsfs==2024.6.1
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   bigframes
+gdown==5.2.0
+    # via -r /backend-container/containers/requirements.user.in
+geemap==0.34.3
+    # via -r /backend-container/containers/requirements.in
+gensim==4.3.3
+    # via -r /backend-container/containers/requirements.user.in
+geocoder==1.38.1
+    # via geemap
+geographiclib==2.0
+    # via geopy
+geopandas==1.0.1
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   bigframes
+geopy==2.4.1
+    # via -r /backend-container/containers/requirements.in
+gin-config==0.5.0
+    # via dopamine-rl
+glob2==0.7
+    # via -r /backend-container/containers/requirements.in
+google==2.0.3
+    # via -r /backend-container/containers/requirements.user.in
+google-ai-generativelanguage==0.6.6
+    # via google-generativeai
+google-api-core[grpc]==2.19.2
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   firebase-admin
+    #   google-ai-generativelanguage
+    #   google-api-python-client
+    #   google-cloud-aiplatform
+    #   google-cloud-bigquery
+    #   google-cloud-bigquery-connection
+    #   google-cloud-bigquery-storage
+    #   google-cloud-bigtable
+    #   google-cloud-core
+    #   google-cloud-datastore
+    #   google-cloud-firestore
+    #   google-cloud-functions
+    #   google-cloud-iam
+    #   google-cloud-language
+    #   google-cloud-pubsub
+    #   google-cloud-resource-manager
+    #   google-cloud-storage
+    #   google-cloud-translate
+    #   google-generativeai
+    #   pandas-gbq
+google-api-python-client==2.137.0
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   earthengine-api
+    #   firebase-admin
+    #   google-generativeai
+    #   pydrive
+    #   pydrive2
+google-auth==2.27.0
+    # via
+    #   -r /backend-container/containers/requirements.core.in
+    #   bigframes
+    #   earthengine-api
+    #   gcsfs
+    #   google-ai-generativelanguage
+    #   google-api-core
+    #   google-api-python-client
+    #   google-auth-httplib2
+    #   google-auth-oauthlib
+    #   google-cloud-aiplatform
+    #   google-cloud-bigquery
+    #   google-cloud-bigquery-connection
+    #   google-cloud-bigquery-storage
+    #   google-cloud-bigtable
+    #   google-cloud-core
+    #   google-cloud-firestore
+    #   google-cloud-functions
+    #   google-cloud-iam
+    #   google-cloud-language
+    #   google-cloud-pubsub
+    #   google-cloud-resource-manager
+    #   google-cloud-storage
+    #   google-cloud-translate
+    #   google-generativeai
+    #   gspread
+    #   pandas-gbq
+    #   pydata-google-auth
+google-auth-httplib2==0.2.0
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   earthengine-api
+    #   google-api-python-client
+google-auth-oauthlib==1.2.1
+    # via
+    #   gcsfs
+    #   gspread
+    #   pandas-gbq
+    #   pydata-google-auth
+google-cloud-aiplatform==1.67.1
+    # via -r /backend-container/containers/requirements.in
+google-cloud-bigquery[bqstorage,pandas]==3.25.0
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   bigframes
+    #   bigquery-magics
+    #   google-cloud-aiplatform
+    #   ibis-framework
+    #   pandas-gbq
+google-cloud-bigquery-connection==1.15.5
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   bigframes
+google-cloud-bigquery-storage==2.26.0
+    # via
+    #   google-cloud-bigquery
+    #   ibis-framework
+google-cloud-bigtable==2.26.0
+    # via bigframes
+google-cloud-core==2.4.1
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   google-cloud-bigquery
+    #   google-cloud-bigtable
+    #   google-cloud-datastore
+    #   google-cloud-firestore
+    #   google-cloud-storage
+    #   google-cloud-translate
+google-cloud-datastore==2.19.0
+    # via -r /backend-container/containers/requirements.in
+google-cloud-firestore==2.16.1
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   firebase-admin
+google-cloud-functions==1.16.5
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   bigframes
+google-cloud-iam==2.15.2
+    # via bigframes
+google-cloud-language==2.13.4
+    # via -r /backend-container/containers/requirements.in
+google-cloud-pubsub==2.23.1
+    # via bigframes
+google-cloud-resource-manager==1.12.5
+    # via
+    #   bigframes
+    #   google-cloud-aiplatform
+google-cloud-storage==2.8.0
+    # via
+    #   -r /backend-container/containers/requirements.user.in
+    #   bigframes
+    #   earthengine-api
+    #   firebase-admin
+    #   gcsfs
+    #   google-cloud-aiplatform
+google-cloud-translate==3.15.5
+    # via -r /backend-container/containers/requirements.in
+google-crc32c==1.6.0
+    # via google-resumable-media
+google-generativeai==0.7.2
+    # via -r /backend-container/containers/requirements.in
+google-pasta==0.2.0
+    # via tensorflow
+google-resumable-media==2.7.2
+    # via
+    #   google-cloud-bigquery
+    #   google-cloud-storage
+googleapis-common-protos[grpc]==1.65.0
+    # via
+    #   google-api-core
+    #   grpc-google-iam-v1
+    #   grpcio-status
+googledrivedownloader==0.4
+    # via -r /backend-container/containers/requirements.in
+graphviz==0.20.3
+    # via -r /backend-container/containers/requirements.in
+greenlet==3.1.1
+    # via sqlalchemy
+grpc-google-iam-v1==0.13.1
+    # via
+    #   google-cloud-bigquery-connection
+    #   google-cloud-bigtable
+    #   google-cloud-functions
+    #   google-cloud-iam
+    #   google-cloud-pubsub
+    #   google-cloud-resource-manager
+grpcio==1.64.1
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   google-api-core
+    #   google-cloud-bigquery
+    #   google-cloud-pubsub
+    #   googleapis-common-protos
+    #   grpc-google-iam-v1
+    #   grpcio-status
+    #   tensorboard
+    #   tensorflow
+grpcio-status==1.48.2
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   google-api-core
+    #   google-cloud-pubsub
+gspread==6.0.2
+    # via
+    #   -r /backend-container/containers/requirements.user.in
+    #   gspread-dataframe
+gspread-dataframe==3.3.1
+    # via -r /backend-container/containers/requirements.user.in
+gym==0.25.2
+    # via dopamine-rl
+gym-notices==0.0.8
+    # via gym
+h5netcdf==1.3.0
+    # via arviz
+h5py==3.11.0
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   h5netcdf
+    #   keras
+    #   tensorflow
+holidays==0.57
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   prophet
+holoviews==1.19.1
+    # via -r /backend-container/containers/requirements.in
+html5lib==1.1
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   yfinance
+httpimport==1.4.0
+    # via -r /backend-container/containers/requirements.in
+httplib2==0.22.0
+    # via
+    #   earthengine-api
+    #   google-api-python-client
+    #   google-auth-httplib2
+    #   oauth2client
+huggingface-hub==0.24.7
+    # via
+    #   -r /backend-container/containers/requirements.user.in
+    #   accelerate
+    #   tokenizers
+    #   transformers
+humanize==4.10.0
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   bigframes
+    #   orbax-checkpoint
+hyperopt==0.2.7
+    # via -r /backend-container/containers/requirements.in
+ibis-framework[bigquery]==9.2.0
+    # via bigframes
+idna==3.10
+    # via
+    #   anyio
+    #   requests
+    #   yarl
+imageio==2.35.1
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   imgaug
+    #   moviepy
+    #   scikit-image
+imageio-ffmpeg==0.5.1
+    # via moviepy
+imagesize==1.4.1
+    # via sphinx
+imbalanced-learn==0.12.3
+    # via -r /backend-container/containers/requirements.in
+imgaug==0.4.0
+    # via -r /backend-container/containers/requirements.in
+immutabledict==4.2.0
+    # via tensorflow-datasets
+importlib-metadata==8.5.0
+    # via dask
+importlib-resources==6.4.5
+    # via
+    #   etils
+    #   prophet
+imutils==0.5.4
+    # via -r /backend-container/containers/requirements.in
+inflect==7.4.0
+    # via -r /backend-container/containers/requirements.in
+iniconfig==2.0.0
+    # via pytest
+intel-cmplr-lib-ur==2024.2.1
+    # via intel-openmp
+intel-openmp==2024.2.1
+    # via mkl
+ipyevents==2.0.2
+    # via geemap
+ipyfilechooser==0.6.0
+    # via geemap
+ipykernel==5.5.6
+    # via
+    #   -r /backend-container/containers/requirements.core.in
+    #   bigquery-magics
+    #   ipyparallel
+    #   ipywidgets
+    #   jupyter-console
+    #   nbclassic
+    #   notebook
+ipyleaflet==0.19.2
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   geemap
+ipyparallel==8.8.0
+    # via -r /backend-container/containers/requirements.core.in
+ipython==7.34.0
+    # via
+    #   -r /backend-container/containers/requirements.core.in
+    #   bigquery-magics
+    #   cufflinks
+    #   datascience
+    #   ipykernel
+    #   ipyparallel
+    #   ipython-sql
+    #   ipywidgets
+    #   jupyter-console
+ipython-genutils==0.2.0
+    # via
+    #   ipykernel
+    #   ipython-sql
+    #   ipywidgets
+    #   nbclassic
+    #   notebook
+ipython-sql==0.5.0
+    # via -r /backend-container/containers/requirements.in
+ipytree==0.2.2
+    # via geemap
+ipywidgets==7.7.1
+    # via
+    #   -r /backend-container/containers/requirements.core.in
+    #   bigframes
+    #   bigquery-magics
+    #   bqplot
+    #   cufflinks
+    #   ipyevents
+    #   ipyfilechooser
+    #   ipyleaflet
+    #   ipytree
+itsdangerous==2.2.0
+    # via flask
+jax[cuda12]==0.4.33
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   chex
+    #   dopamine-rl
+    #   flax
+    #   optax
+    #   orbax-checkpoint
+jax-cuda12-pjrt==0.4.33
+    # via jax-cuda12-plugin
+jax-cuda12-plugin[with-cuda]==0.4.33
+    # via jax
+jaxlib==0.4.33
+    # via
+    #   chex
+    #   dopamine-rl
+    #   jax
+    #   optax
+    #   orbax-checkpoint
+jedi==0.19.1
+    # via ipython
+jellyfish==1.1.0
+    # via bigframes
+jieba==0.42.1
+    # via -r /backend-container/containers/requirements.in
+jinja2==3.1.4
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   altair
+    #   bokeh
+    #   branca
+    #   distributed
+    #   flask
+    #   folium
+    #   jupyter-server
+    #   nbconvert
+    #   notebook
+    #   rpy2
+    #   spacy
+    #   sphinx
+    #   torch
+joblib==1.4.2
+    # via
+    #   imbalanced-learn
+    #   librosa
+    #   mlxtend
+    #   music21
+    #   nltk
+    #   scikit-learn
+jsonpickle==3.3.0
+    # via music21
+jsonschema==4.23.0
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   altair
+    #   nbformat
+jsonschema-specifications==2023.12.1
+    # via jsonschema
+jupyter-client==6.1.12
+    # via
+    #   -r /backend-container/containers/requirements.user.in
+    #   ipykernel
+    #   ipyparallel
+    #   jupyter-console
+    #   jupyter-server
+    #   nbclient
+    #   notebook
+jupyter-console==6.1.0
+    # via -r /backend-container/containers/requirements.user.in
+jupyter-core==5.7.2
+    # via
+    #   jupyter-client
+    #   jupyter-server
+    #   nbclient
+    #   nbconvert
+    #   nbformat
+    #   notebook
+jupyter-leaflet==0.19.2
+    # via ipyleaflet
+jupyter-server==1.24.0
+    # via
+    #   -r /backend-container/containers/requirements.user.in
+    #   notebook-shim
+jupyterlab-pygments==0.3.0
+    # via nbconvert
+jupyterlab-widgets==3.0.13
+    # via
+    #   -r /backend-container/containers/requirements.user.in
+    #   ipywidgets
+kaggle==1.6.17
+    # via -r /backend-container/containers/requirements.user.in
+kagglehub==0.3.0
+    # via -r /backend-container/containers/requirements.user.in
+keras==3.4.1
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   tensorflow
+kiwisolver==1.4.7
+    # via matplotlib
+langcodes==3.4.0
+    # via spacy
+language-data==1.2.0
+    # via langcodes
+lazy-loader==0.4
+    # via
+    #   librosa
+    #   scikit-image
+libclang==18.1.1
+    # via tensorflow
+librosa==0.10.2.post1
+    # via -r /backend-container/containers/requirements.user.in
+lightgbm==4.5.0
+    # via -r /backend-container/containers/requirements.in
+linkify-it-py==2.0.3
+    # via panel
+llvmlite==0.43.0
+    # via numba
+locket==1.0.0
+    # via
+    #   distributed
+    #   partd
+logical-unification==0.4.6
+    # via
+    #   cons
+    #   minikanren
+    #   pytensor
+lxml==4.9.4
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   nbconvert
+    #   pandas-datareader
+    #   yfinance
+marisa-trie==1.2.0
+    # via language-data
+markdown==3.7
+    # via
+    #   panel
+    #   tensorboard
+markdown-it-py==3.0.0
+    # via
+    #   mdit-py-plugins
+    #   panel
+    #   rich
+markupsafe==2.1.5
+    # via
+    #   jinja2
+    #   nbconvert
+    #   werkzeug
+matplotlib==3.7.1
+    # via
+    #   -r /backend-container/containers/requirements.core.in
+    #   arviz
+    #   bigframes
+    #   datascience
+    #   fastai
+    #   geemap
+    #   imgaug
+    #   matplotlib-venn
+    #   missingno
+    #   mlxtend
+    #   music21
+    #   plotnine
+    #   prophet
+    #   pycocotools
+    #   seaborn
+    #   wordcloud
+    #   yellowbrick
+matplotlib-inline==0.1.7
+    # via ipython
+matplotlib-venn==1.1.1
+    # via -r /backend-container/containers/requirements.in
+mdit-py-plugins==0.4.2
+    # via panel
+mdurl==0.1.2
+    # via markdown-it-py
+minikanren==1.0.3
+    # via pytensor
+missingno==0.5.2
+    # via -r /backend-container/containers/requirements.in
+mistune==0.8.4
+    # via nbconvert
+mizani==0.11.4
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   plotnine
+mkl==2024.2.2
+    # via -r /backend-container/containers/requirements.in
+ml-dtypes==0.4.1
+    # via
+    #   jax
+    #   jaxlib
+    #   keras
+    #   tensorflow
+    #   tensorstore
+mlxtend==0.23.1
+    # via -r /backend-container/containers/requirements.in
+more-itertools==10.5.0
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   inflect
+    #   music21
+moviepy==1.0.3
+    # via -r /backend-container/containers/requirements.in
+mpmath==1.3.0
+    # via sympy
+msgpack==1.0.8
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   blosc2
+    #   cachecontrol
+    #   distributed
+    #   flax
+    #   librosa
+    #   orbax-checkpoint
+multidict==6.1.0
+    # via
+    #   aiohttp
+    #   yarl
+multipledispatch==1.0.0
+    # via
+    #   etuples
+    #   logical-unification
+    #   minikanren
+multitasking==0.0.11
+    # via yfinance
+murmurhash==1.0.10
+    # via
+    #   preshed
+    #   spacy
+    #   thinc
+music21==9.1.0
+    # via -r /backend-container/containers/requirements.in
+namex==0.0.8
+    # via keras
+natsort==8.4.0
+    # via -r /backend-container/containers/requirements.in
+nbclassic==1.1.0
+    # via notebook
+nbclient==0.10.0
+    # via nbconvert
+nbconvert==6.5.4
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   jupyter-server
+    #   notebook
+nbformat==5.10.4
+    # via
+    #   jupyter-server
+    #   nbclient
+    #   nbconvert
+    #   notebook
+nest-asyncio==1.6.0
+    # via
+    #   nbclassic
+    #   notebook
+    #   orbax-checkpoint
+networkx==3.3
+    # via
+    #   hyperopt
+    #   python-louvain
+    #   scikit-image
+    #   torch
+nibabel==5.2.1
+    # via -r /backend-container/containers/requirements.in
+nltk==3.8.1
+    # via
+    #   -r /backend-container/containers/requirements.user.in
+    #   textblob
+notebook==6.5.5
+    # via
+    #   -r /backend-container/containers/requirements.core.in
+    #   widgetsnbextension
+notebook-shim==0.2.4
+    # via nbclassic
+numba==0.60.0
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   cudf-cu12
+    #   librosa
+    #   rmm-cu12
+numexpr==2.10.1
+    # via tables
+numpy==1.26.4
+    # via
+    #   -r /backend-container/containers/requirements.user.in
+    #   accelerate
+    #   albucore
+    #   albumentations
+    #   altair
+    #   arviz
+    #   astropy
+    #   autograd
+    #   bigframes
+    #   blis
+    #   bokeh
+    #   bqplot
+    #   chex
+    #   clarabel
+    #   cmdstanpy
+    #   contourpy
+    #   cudf-cu12
+    #   cufflinks
+    #   cupy-cuda12x
+    #   cvxpy
+    #   datascience
+    #   db-dtypes
+    #   dopamine-rl
+    #   ecos
+    #   etils
+    #   flax
+    #   folium
+    #   geemap
+    #   gensim
+    #   geopandas
+    #   gym
+    #   h5py
+    #   holoviews
+    #   hyperopt
+    #   ibis-framework
+    #   imageio
+    #   imbalanced-learn
+    #   imgaug
+    #   jax
+    #   jaxlib
+    #   keras
+    #   librosa
+    #   lightgbm
+    #   matplotlib
+    #   matplotlib-venn
+    #   missingno
+    #   mizani
+    #   ml-dtypes
+    #   mlxtend
+    #   moviepy
+    #   music21
+    #   nibabel
+    #   numba
+    #   numexpr
+    #   opencv-contrib-python
+    #   opencv-python
+    #   opencv-python-headless
+    #   opt-einsum
+    #   optax
+    #   orbax-checkpoint
+    #   osqp
+    #   pandas
+    #   pandas-gbq
+    #   pandas-stubs
+    #   patsy
+    #   plotnine
+    #   prophet
+    #   pyarrow
+    #   pycocotools
+    #   pyerfa
+    #   pymc
+    #   pyogrio
+    #   pytensor
+    #   python-louvain
+    #   qdldl
+    #   rmm-cu12
+    #   scikit-image
+    #   scikit-learn
+    #   scipy
+    #   scs
+    #   seaborn
+    #   shapely
+    #   sklearn-pandas
+    #   soxr
+    #   spacy
+    #   stanio
+    #   statsmodels
+    #   tables
+    #   tensorboard
+    #   tensorflow
+    #   tensorflow-datasets
+    #   tensorflow-hub
+    #   tensorflow-probability
+    #   tensorstore
+    #   thinc
+    #   tifffile
+    #   torchvision
+    #   transformers
+    #   wordcloud
+    #   xarray
+    #   xarray-einstats
+    #   xgboost
+    #   yellowbrick
+    #   yfinance
+nvidia-cublas-cu12==12.6.1.4
+    # via
+    #   jax-cuda12-plugin
+    #   nvidia-cudnn-cu12
+    #   nvidia-cusolver-cu12
+nvidia-cuda-cupti-cu12==12.6.68
+    # via jax-cuda12-plugin
+nvidia-cuda-nvcc-cu12==12.6.68
+    # via jax-cuda12-plugin
+nvidia-cuda-runtime-cu12==12.6.68
+    # via jax-cuda12-plugin
+nvidia-cudnn-cu12==9.4.0.58
+    # via jax-cuda12-plugin
+nvidia-cufft-cu12==11.2.6.59
+    # via jax-cuda12-plugin
+nvidia-cusolver-cu12==11.6.4.69
+    # via jax-cuda12-plugin
+nvidia-cusparse-cu12==12.5.3.3
+    # via
+    #   jax-cuda12-plugin
+    #   nvidia-cusolver-cu12
+nvidia-nccl-cu12==2.23.4
+    # via
+    #   jax-cuda12-plugin
+    #   xgboost
+nvidia-nvjitlink-cu12==12.6.68
+    # via
+    #   jax-cuda12-plugin
+    #   nvidia-cufft-cu12
+    #   nvidia-cusolver-cu12
+    #   nvidia-cusparse-cu12
+nvtx==0.2.10
+    # via cudf-cu12
+oauth2client==4.1.3
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   pydrive
+    #   pydrive2
+oauthlib==3.2.2
+    # via
+    #   requests-oauthlib
+    #   tweepy
+opencv-contrib-python==4.10.0.84
+    # via -r /backend-container/containers/requirements.in
+opencv-python==4.10.0.84
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   dopamine-rl
+    #   imgaug
+opencv-python-headless==4.10.0.84
+    # via
+    #   albucore
+    #   albumentations
+openpyxl==3.1.5
+    # via -r /backend-container/containers/requirements.in
+opt-einsum==3.3.0
+    # via
+    #   jax
+    #   tensorflow
+optax==0.2.3
+    # via flax
+optree==0.12.1
+    # via keras
+orbax-checkpoint==0.6.4
+    # via flax
+osqp==0.6.7.post0
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   cvxpy
+packaging==24.1
+    # via
+    #   accelerate
+    #   arviz
+    #   astropy
+    #   bigquery-magics
+    #   bokeh
+    #   cudf-cu12
+    #   dask
+    #   db-dtypes
+    #   distributed
+    #   fastai
+    #   fastcore
+    #   geopandas
+    #   google-cloud-aiplatform
+    #   google-cloud-bigquery
+    #   h5netcdf
+    #   holoviews
+    #   huggingface-hub
+    #   jupyter-server
+    #   kagglehub
+    #   keras
+    #   lazy-loader
+    #   matplotlib
+    #   nbconvert
+    #   nibabel
+    #   pandas-gbq
+    #   plotly
+    #   pooch
+    #   pyogrio
+    #   pytest
+    #   scikit-image
+    #   spacy
+    #   sphinx
+    #   statsmodels
+    #   tables
+    #   tensorflow
+    #   thinc
+    #   transformers
+    #   weasel
+    #   xarray
+pandas==2.1.4
+    # via
+    #   -r /backend-container/containers/requirements.core.in
+    #   altair
+    #   arviz
+    #   bigframes
+    #   bigquery-magics
+    #   bokeh
+    #   bqplot
+    #   cmdstanpy
+    #   cudf-cu12
+    #   cufflinks
+    #   datascience
+    #   db-dtypes
+    #   dopamine-rl
+    #   fastai
+    #   geemap
+    #   geopandas
+    #   google-cloud-bigquery
+    #   gspread-dataframe
+    #   holoviews
+    #   ibis-framework
+    #   mizani
+    #   mlxtend
+    #   pandas-datareader
+    #   pandas-gbq
+    #   panel
+    #   plotnine
+    #   prophet
+    #   pymc
+    #   seaborn
+    #   sklearn-pandas
+    #   statsmodels
+    #   vega-datasets
+    #   xarray
+    #   yfinance
+pandas-datareader==0.10.0
+    # via -r /backend-container/containers/requirements.in
+pandas-gbq==0.23.1
+    # via -r /backend-container/containers/requirements.in
+pandas-stubs==2.1.4.231227
+    # via -r /backend-container/containers/requirements.core.in
+pandocfilters==1.5.1
+    # via nbconvert
+panel==1.4.5
+    # via holoviews
+param==2.1.1
+    # via
+    #   holoviews
+    #   panel
+    #   pyviz-comms
+parso==0.8.4
+    # via jedi
+parsy==2.1
+    # via ibis-framework
+partd==1.4.2
+    # via dask
+pathlib==1.0.1
+    # via -r /backend-container/containers/requirements.in
+patsy==0.5.6
+    # via statsmodels
+peewee==3.17.6
+    # via yfinance
+pexpect==4.9.0
+    # via ipython
+pickleshare==0.7.5
+    # via ipython
+pillow==10.4.0
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   bokeh
+    #   dopamine-rl
+    #   fastai
+    #   imageio
+    #   imgaug
+    #   matplotlib
+    #   scikit-image
+    #   torchvision
+    #   wordcloud
+platformdirs==4.3.6
+    # via
+    #   jupyter-core
+    #   pooch
+    #   yfinance
+plotly==5.24.1
+    # via
+    #   -r /backend-container/containers/requirements.user.in
+    #   cufflinks
+    #   datascience
+    #   geemap
+plotnine==0.13.6
+    # via -r /backend-container/containers/requirements.in
+pluggy==1.5.0
+    # via pytest
+polars==1.6.0
+    # via -r /backend-container/containers/requirements.in
+pooch==1.8.2
+    # via librosa
+portpicker==1.5.2
+    # via -r /backend-container/containers/requirements.core.in
+prefetch-generator==1.0.3
+    # via -r /backend-container/containers/requirements.in
+preshed==3.0.9
+    # via
+    #   spacy
+    #   thinc
+prettytable==3.11.0
+    # via ipython-sql
+proglog==0.1.10
+    # via moviepy
+progressbar2==4.5.0
+    # via -r /backend-container/containers/requirements.in
+prometheus-client==0.21.0
+    # via
+    #   jupyter-server
+    #   notebook
+promise==2.3
+    # via tensorflow-datasets
+prompt-toolkit==3.0.47
+    # via
+    #   ipython
+    #   jupyter-console
+prophet==1.1.5
+    # via -r /backend-container/containers/requirements.in
+proto-plus==1.24.0
+    # via
+    #   google-ai-generativelanguage
+    #   google-api-core
+    #   google-cloud-aiplatform
+    #   google-cloud-bigquery-connection
+    #   google-cloud-bigquery-storage
+    #   google-cloud-bigtable
+    #   google-cloud-datastore
+    #   google-cloud-firestore
+    #   google-cloud-functions
+    #   google-cloud-iam
+    #   google-cloud-language
+    #   google-cloud-pubsub
+    #   google-cloud-resource-manager
+    #   google-cloud-translate
+protobuf==3.20.3
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   cudf-cu12
+    #   google-ai-generativelanguage
+    #   google-api-core
+    #   google-cloud-aiplatform
+    #   google-cloud-bigquery-connection
+    #   google-cloud-bigquery-storage
+    #   google-cloud-bigtable
+    #   google-cloud-datastore
+    #   google-cloud-firestore
+    #   google-cloud-functions
+    #   google-cloud-iam
+    #   google-cloud-language
+    #   google-cloud-pubsub
+    #   google-cloud-resource-manager
+    #   google-cloud-translate
+    #   google-generativeai
+    #   googleapis-common-protos
+    #   grpc-google-iam-v1
+    #   grpcio-status
+    #   orbax-checkpoint
+    #   proto-plus
+    #   tensorboard
+    #   tensorflow
+    #   tensorflow-datasets
+    #   tensorflow-hub
+    #   tensorflow-metadata
+psutil==5.9.5
+    # via
+    #   -r /backend-container/containers/requirements.core.in
+    #   accelerate
+    #   distributed
+    #   ipyparallel
+    #   portpicker
+    #   tensorflow-datasets
+psycopg2==2.9.9
+    # via -r /backend-container/containers/requirements.in
+ptyprocess==0.7.0
+    # via
+    #   pexpect
+    #   terminado
+py-cpuinfo==9.0.0
+    # via tables
+py4j==0.10.9.7
+    # via hyperopt
+pyarrow==14.0.2
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   bigframes
+    #   bigquery-magics
+    #   cudf-cu12
+    #   db-dtypes
+    #   google-cloud-bigquery
+    #   ibis-framework
+    #   pandas-gbq
+    #   tensorflow-datasets
+pyarrow-hotfix==0.6
+    # via ibis-framework
+pyasn1==0.6.1
+    # via
+    #   oauth2client
+    #   pyasn1-modules
+    #   rsa
+pyasn1-modules==0.4.1
+    # via
+    #   google-auth
+    #   oauth2client
+pycocotools==2.0.8
+    # via -r /backend-container/containers/requirements.in
+pycparser==2.22
+    # via cffi
+pydantic==2.9.2
+    # via
+    #   albumentations
+    #   confection
+    #   google-cloud-aiplatform
+    #   google-generativeai
+    #   spacy
+    #   thinc
+    #   weasel
+pydantic-core==2.23.4
+    # via pydantic
+pydata-google-auth==1.8.2
+    # via
+    #   bigframes
+    #   bigquery-magics
+    #   ibis-framework
+    #   pandas-gbq
+pydot==3.0.1
+    # via -r /backend-container/containers/requirements.in
+pydot-ng==2.0.0
+    # via -r /backend-container/containers/requirements.in
+pydotplus==2.0.2
+    # via -r /backend-container/containers/requirements.in
+pydrive==1.3.1
+    # via -r /backend-container/containers/requirements.in
+pydrive2==1.20.0
+    # via -r /backend-container/containers/requirements.in
+pyerfa==2.0.1.4
+    # via astropy
+pygame==2.6.0
+    # via dopamine-rl
+pygments==2.18.0
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   ipython
+    #   jupyter-console
+    #   nbconvert
+    #   rich
+    #   sphinx
+pyjwt[crypto]==2.9.0
+    # via firebase-admin
+pymc==5.16.2
+    # via -r /backend-container/containers/requirements.in
+pymystem3==0.2.0
+    # via -r /backend-container/containers/requirements.in
+pynvjitlink-cu12==0.3.0
+    # via cudf-cu12
+pyogrio==0.9.0
+    # via geopandas
+pyopengl==3.1.7
+    # via -r /backend-container/containers/requirements.in
+pyopenssl==24.2.1
+    # via pydrive2
+pyparsing==3.1.4
+    # via
+    #   httplib2
+    #   matplotlib
+    #   pydot
+    #   pydot-ng
+    #   pydotplus
+pyperclip==1.9.0
+    # via geemap
+pyproj==3.6.1
+    # via geopandas
+pyshp==2.3.1
+    # via geemap
+pysocks==1.7.1
+    # via requests
+pytensor==2.25.4
+    # via pymc
+pytest==7.4.4
+    # via -r /backend-container/containers/requirements.user.in
+python-box==7.2.0
+    # via geemap
+python-dateutil==2.8.2
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   google-cloud-bigquery
+    #   holidays
+    #   ibis-framework
+    #   ipyparallel
+    #   jupyter-client
+    #   kaggle
+    #   matplotlib
+    #   pandas
+python-louvain==0.16
+    # via -r /backend-container/containers/requirements.in
+python-slugify==8.0.4
+    # via kaggle
+python-utils==3.8.2
+    # via progressbar2
+pytz==2024.2
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   ibis-framework
+    #   pandas
+    #   rpy2
+    #   yfinance
+pyviz-comms==3.0.3
+    # via
+    #   holoviews
+    #   panel
+pyyaml==6.0.2
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   accelerate
+    #   albumentations
+    #   astropy
+    #   bokeh
+    #   dask
+    #   distributed
+    #   fastai
+    #   flax
+    #   huggingface-hub
+    #   orbax-checkpoint
+    #   pydrive
+    #   pydrive2
+    #   transformers
+pyzmq==24.0.1
+    # via
+    #   -r /backend-container/containers/requirements.user.in
+    #   ipyparallel
+    #   jupyter-client
+    #   jupyter-server
+    #   notebook
+qdldl==0.1.7.post4
+    # via osqp
+ratelim==0.1.6
+    # via geocoder
+referencing==0.35.1
+    # via
+    #   jsonschema
+    #   jsonschema-specifications
+regex==2024.9.11
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   nltk
+    #   transformers
+requests[socks]==2.32.3
+    # via
+    #   -r /backend-container/containers/requirements.core.in
+    #   bigframes
+    #   cachecontrol
+    #   community
+    #   earthengine-api
+    #   fastai
+    #   folium
+    #   gcsfs
+    #   gdown
+    #   geocoder
+    #   google-api-core
+    #   google-cloud-bigquery
+    #   google-cloud-storage
+    #   huggingface-hub
+    #   kaggle
+    #   kagglehub
+    #   moviepy
+    #   music21
+    #   pandas-datareader
+    #   panel
+    #   pooch
+    #   pymystem3
+    #   requests-oauthlib
+    #   spacy
+    #   sphinx
+    #   tensorflow
+    #   tensorflow-datasets
+    #   transformers
+    #   tweepy
+    #   weasel
+    #   yfinance
+requests-oauthlib==1.3.1
+    # via
+    #   google-auth-oauthlib
+    #   tweepy
+rich==13.8.1
+    # via
+    #   cudf-cu12
+    #   flax
+    #   ibis-framework
+    #   keras
+    #   pymc
+    #   typer
+rmm-cu12==24.4.0
+    # via cudf-cu12
+rpds-py==0.20.0
+    # via
+    #   jsonschema
+    #   referencing
+rpy2==3.4.2
+    # via -r /backend-container/containers/requirements.user.in
+rsa==4.9
+    # via
+    #   google-auth
+    #   oauth2client
+safetensors==0.4.5
+    # via
+    #   accelerate
+    #   transformers
+scikit-image==0.24.0
+    # via
+    #   -r /backend-container/containers/requirements.user.in
+    #   albumentations
+    #   imgaug
 scikit-learn==1.5.2
-scipy==1.7.3
-
-# Image processing
-Pillow==8.4.0
-opencv-python-headless==4.5.5.64  # Headless version for image processing
-
-# Visualization (optional)
-matplotlib==3.4.3
-
-# HTTP requests (optional, for API interactions)
-requests==2.26.0
-
-# Ensures proper installation of dependencies
-setuptools>=58.0.0
-wheel>=0.36.0
+    # via
+    #   -r /backend-container/containers/requirements.user.in
+    #   bigframes
+    #   fastai
+    #   imbalanced-learn
+    #   librosa
+    #   mlxtend
+    #   sklearn-pandas
+    #   yellowbrick
+scipy==1.13.1
+    # via
+    #   -r /backend-container/containers/requirements.user.in
+    #   albumentations
+    #   arviz
+    #   clarabel
+    #   cvxpy
+    #   datascience
+    #   ecos
+    #   fastai
+    #   gensim
+    #   hyperopt
+    #   imbalanced-learn
+    #   imgaug
+    #   jax
+    #   jaxlib
+    #   librosa
+    #   lightgbm
+    #   matplotlib-venn
+    #   missingno
+    #   mizani
+    #   mlxtend
+    #   osqp
+    #   plotnine
+    #   pymc
+    #   pytensor
+    #   qdldl
+    #   scikit-image
+    #   scikit-learn
+    #   scs
+    #   sklearn-pandas
+    #   statsmodels
+    #   xarray-einstats
+    #   xgboost
+    #   yellowbrick
+scooby==0.10.0
+    # via geemap
+scs==3.2.7
+    # via cvxpy
+seaborn==0.13.1
+    # via
+    #   -r /backend-container/containers/requirements.core.in
+    #   missingno
+send2trash==1.8.3
+    # via
+    #   jupyter-server
+    #   notebook
+sentencepiece==0.2.0
+    # via -r /backend-container/containers/requirements.user.in
+shapely==2.0.6
+    # via
+    #   geopandas
+    #   google-cloud-aiplatform
+    #   imgaug
+shellingham==1.5.4
+    # via typer
+simple-parsing==0.1.6
+    # via tensorflow-datasets
+six==1.16.0
+    # via
+    #   astunparse
+    #   bleach
+    #   cufflinks
+    #   geocoder
+    #   google-pasta
+    #   gspread-dataframe
+    #   html5lib
+    #   hyperopt
+    #   imgaug
+    #   ipython-sql
+    #   kaggle
+    #   oauth2client
+    #   patsy
+    #   promise
+    #   python-dateutil
+    #   tensorboard
+    #   tensorflow
+    #   tensorflow-probability
+sklearn-pandas==2.2.0
+    # via -r /backend-container/containers/requirements.user.in
+smart-open==7.0.4
+    # via
+    #   gensim
+    #   weasel
+sniffio==1.3.1
+    # via anyio
+snowballstemmer==2.2.0
+    # via sphinx
+sortedcontainers==2.4.0
+    # via distributed
+soundfile==0.12.1
+    # via librosa
+soupsieve==2.6
+    # via beautifulsoup4
+soxr==0.5.0.post1
+    # via librosa
+spacy==3.7.6
+    # via
+    #   -r /backend-container/containers/requirements.user.in
+    #   fastai
+spacy-legacy==3.0.12
+    # via spacy
+spacy-loggers==1.0.5
+    # via spacy
+sphinx==5.0.2
+    # via -r /backend-container/containers/requirements.in
+sphinxcontrib-applehelp==2.0.0
+    # via sphinx
+sphinxcontrib-devhelp==2.0.0
+    # via sphinx
+sphinxcontrib-htmlhelp==2.1.0
+    # via sphinx
+sphinxcontrib-jsmath==1.0.1
+    # via sphinx
+sphinxcontrib-qthelp==2.0.0
+    # via sphinx
+sphinxcontrib-serializinghtml==2.0.0
+    # via sphinx
+sqlalchemy==2.0.35
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   bigframes
+    #   ipython-sql
+sqlglot==25.1.0
+    # via
+    #   bigframes
+    #   ibis-framework
+sqlparse==0.5.1
+    # via ipython-sql
+srsly==2.4.8
+    # via
+    #   confection
+    #   spacy
+    #   thinc
+    #   weasel
+stanio==0.5.1
+    # via cmdstanpy
+statsmodels==0.14.3
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   plotnine
+strenum==0.4.15
+    # via gspread
+sympy==1.13.3
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   torch
+tables==3.8.0
+    # via -r /backend-container/containers/requirements.in
+tabulate==0.9.0
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   bigframes
+tbb==2021.13.1
+    # via mkl
+tblib==3.0.0
+    # via distributed
+tenacity==9.0.0
+    # via plotly
+tensorboard==2.17.0
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   tensorflow
+tensorboard-data-server==0.7.2
+    # via tensorboard
+tensorflow==2.17.0
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   dopamine-rl
+    #   tf-keras
+tensorflow-datasets==4.9.6
+    # via -r /backend-container/containers/requirements.user.in
+tensorflow-hub==0.16.1
+    # via -r /backend-container/containers/requirements.user.in
+tensorflow-io-gcs-filesystem==0.37.1
+    # via tensorflow
+tensorflow-metadata==1.15.0
+    # via tensorflow-datasets
+tensorflow-probability==0.24.0
+    # via
+    #   -r /backend-container/containers/requirements.user.in
+    #   dopamine-rl
+tensorstore==0.1.65
+    # via
+    #   flax
+    #   orbax-checkpoint
+termcolor==2.4.0
+    # via
+    #   tensorflow
+    #   tensorflow-datasets
+terminado==0.18.1
+    # via
+    #   jupyter-server
+    #   notebook
+text-unidecode==1.3
+    # via python-slugify
+textblob==0.17.1
+    # via -r /backend-container/containers/requirements.in
+tf-keras==2.17.0
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   tensorflow-hub
+tf-slim==1.1.0
+    # via dopamine-rl
+thinc==8.2.5
+    # via spacy
+threadpoolctl==3.5.0
+    # via
+    #   imbalanced-learn
+    #   pymc
+    #   scikit-learn
+tifffile==2024.9.20
+    # via scikit-image
+tinycss2==1.3.0
+    # via nbconvert
+tokenizers==0.19.1
+    # via transformers
+toml==0.10.2
+    # via tensorflow-datasets
+tomli==2.0.1
+    # via pytest
+toolz==0.12.1
+    # via
+    #   altair
+    #   chex
+    #   dask
+    #   distributed
+    #   ibis-framework
+    #   logical-unification
+    #   minikanren
+    #   partd
+torch @ https://download.pytorch.org/whl/cu121_full/torch-2.4.1%2Bcu121-cp310-cp310-linux_x86_64.whl
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   accelerate
+    #   fastai
+    #   torchaudio
+    #   torchvision
+torchaudio @ https://download.pytorch.org/whl/cu121_full/torchaudio-2.4.1%2Bcu121-cp310-cp310-linux_x86_64.whl
+    # via -r /backend-container/containers/requirements.in
+torchsummary==1.5.1
+    # via -r /backend-container/containers/requirements.in
+torchvision @ https://download.pytorch.org/whl/cu121_full/torchvision-0.19.1%2Bcu121-cp310-cp310-linux_x86_64.whl
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   fastai
+tornado==6.3.3
+    # via
+    #   -r /backend-container/containers/requirements.core.in
+    #   bokeh
+    #   distributed
+    #   ipykernel
+    #   ipyparallel
+    #   jupyter-client
+    #   jupyter-server
+    #   notebook
+    #   terminado
+tqdm==4.66.5
+    # via
+    #   -r /backend-container/containers/requirements.user.in
+    #   bigquery-magics
+    #   cmdstanpy
+    #   dopamine-rl
+    #   etils
+    #   gdown
+    #   google-generativeai
+    #   huggingface-hub
+    #   hyperopt
+    #   ipyparallel
+    #   kaggle
+    #   kagglehub
+    #   moviepy
+    #   nltk
+    #   panel
+    #   proglog
+    #   prophet
+    #   spacy
+    #   tensorflow-datasets
+    #   transformers
+traitlets==5.7.1
+    # via
+    #   -r /backend-container/containers/requirements.core.in
+    #   bqplot
+    #   ipykernel
+    #   ipyparallel
+    #   ipython
+    #   ipywidgets
+    #   jupyter-client
+    #   jupyter-core
+    #   jupyter-server
+    #   matplotlib-inline
+    #   nbclient
+    #   nbconvert
+    #   nbformat
+    #   notebook
+    #   traittypes
+traittypes==0.2.1
+    # via
+    #   bqplot
+    #   ipyleaflet
+transformers==4.44.2
+    # via -r /backend-container/containers/requirements.user.in
+tweepy==4.14.0
+    # via -r /backend-container/containers/requirements.in
+typeguard==4.3.0
+    # via inflect
+typer==0.12.5
+    # via
+    #   spacy
+    #   weasel
+types-pytz==2024.2.0.20240913
+    # via pandas-stubs
+typing-extensions==4.12.2
+    # via
+    #   arviz
+    #   chex
+    #   cloudpathlib
+    #   cudf-cu12
+    #   etils
+    #   flax
+    #   google-generativeai
+    #   huggingface-hub
+    #   ibis-framework
+    #   librosa
+    #   multidict
+    #   optree
+    #   orbax-checkpoint
+    #   panel
+    #   pydantic
+    #   pydantic-core
+    #   pymc
+    #   python-utils
+    #   simple-parsing
+    #   sqlalchemy
+    #   tensorflow
+    #   torch
+    #   typeguard
+    #   typer
+tzdata==2024.1
+    # via pandas
+tzlocal==5.2
+    # via rpy2
+uc-micro-py==1.0.3
+    # via linkify-it-py
+uritemplate==4.1.1
+    # via google-api-python-client
+urllib3==2.2.3
+    # via
+    #   -r /backend-container/containers/requirements.user.in
+    #   distributed
+    #   kaggle
+    #   requests
+vega-datasets==0.9.0
+    # via -r /backend-container/containers/requirements.user.in
+wasabi==1.1.3
+    # via
+    #   spacy
+    #   thinc
+    #   weasel
+wcwidth==0.2.13
+    # via
+    #   prettytable
+    #   prompt-toolkit
+weasel==0.4.1
+    # via spacy
+webcolors==24.8.0
+    # via music21
+webencodings==0.5.1
+    # via
+    #   bleach
+    #   html5lib
+    #   tinycss2
+websocket-client==1.8.0
+    # via jupyter-server
+werkzeug==3.0.4
+    # via
+    #   flask
+    #   tensorboard
+wheel==0.44.0
+    # via astunparse
+widgetsnbextension==3.6.9
+    # via ipywidgets
+wordcloud==1.9.3
+    # via -r /backend-container/containers/requirements.in
+wrapt==1.16.0
+    # via
+    #   smart-open
+    #   tensorflow
+    #   tensorflow-datasets
+xarray==2024.9.0
+    # via
+    #   -r /backend-container/containers/requirements.in
+    #   arviz
+    #   xarray-einstats
+xarray-einstats==0.8.0
+    # via arviz
+xgboost==2.1.1
+    # via -r /backend-container/containers/requirements.in
+xlrd==2.0.1
+    # via -r /backend-container/containers/requirements.in
+xyzservices==2024.9.0
+    # via
+    #   bokeh
+    #   folium
+    #   ipyleaflet
+    #   panel
+yarl==1.11.1
+    # via aiohttp
+yellowbrick==1.5
+    # via -r /backend-container/containers/requirements.in
+yfinance==0.2.43
+    # via -r /backend-container/containers/requirements.in
+zict==3.0.0
+    # via distributed
+zipp==3.20.2
+    # via
+    #   etils
+    #   importlib-metadata
