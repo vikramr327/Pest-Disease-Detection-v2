@@ -4,7 +4,7 @@ def get_app_response(prediction):
     st.write(f"Predicted Plant Disease or Pest: {prediction}")
 
     # Set your OpenAI API key
-    if "OPENAI_API_KEY" in st.secrets:
+    if "OPENAI_API_SERVICE_KEY" in st.secrets:
         openai.api_key = st.secrets["OPENAI_API_SERVICE_KEY"]
         st.write(openai.api_key)
     else:
