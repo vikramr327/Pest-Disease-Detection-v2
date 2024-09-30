@@ -13,7 +13,7 @@ def make_prediction(input_image):
   
 
   #myModel.eval()  # Set model to evaluation mode #temp
-  st.write ("Model uploaded!") # You may remove this in your finalized web app!
+  #st.write ("Model uploaded!") # You may remove this in your finalized web app!
   input_resized = cv2.resize(input_image, (128, 128))
   input_resized = np.swapaxes(input_resized, 0,2)
   input_resized = np.swapaxes(input_resized, 1,2)
