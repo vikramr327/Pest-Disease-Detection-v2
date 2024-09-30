@@ -4,7 +4,10 @@ def get_app_response(prediction):
     st.write(f"Predicted Plant Disease or Pest: {prediction}")
 
     # Set your OpenAI API key
-    openai.api_key = st.secrets["OPENAI_API_KEY"]
+    if "OPENAI_API_KEY" in st.secrets:
+        openai.api_key = st.secrets["OPENAI_API_KEY"]
+    else:
+        st.error("API Key not found. Please configure the OPENAI_API_KEY in Streamlit Secrets.")
 
     # Construct the user prompt
     st.write(f"General Information about '{prediction}'")
