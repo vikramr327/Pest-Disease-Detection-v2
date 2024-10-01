@@ -12,7 +12,7 @@ def get_app_response(prediction):
     # Construct the user prompt
     st.markdown(f"<p style='font-size:18px'><strong>*General Information about '{prediction}'*:<strong></p>", unsafe_allow_html=True)
     #st.write(f"**General Information about '{prediction}'**")
-    user_message = f"Please provide general information, causes, remedies, and where they appear for '{prediction}' and limit output to 100 words"
+    user_message = f"Please provide general information, causes, remedies, and where they appear for '{prediction}' and limit output to 150 words"
     # Append the user message to the messages list
     messages = [
         {"role": "system", "content": "You are an intelligent assistant."},
