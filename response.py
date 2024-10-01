@@ -10,7 +10,7 @@ def get_app_response(prediction):
         st.error("API Key not found. Please configure the OPENAI_API_KEY in Streamlit Secrets.")
 
     # Construct the user prompt
-    st.markdown(f"<p style='font-size:18px'><strong>*General Information about '{prediction}'*:<strong></p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='font-size:18px'><strong>*General Information about {prediction}*:<strong></p>", unsafe_allow_html=True)
     #st.write(f"**General Information about '{prediction}'**")
     user_message = f"Please provide general information, causes, specific remedies, and where they appear for '{prediction}' and limit output to 150 words."
     messages = [
