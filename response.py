@@ -12,7 +12,7 @@ def get_app_response(prediction):
     # Construct the user prompt
     st.markdown(f"<p style='font-size:18px'><strong>*General Information about {prediction}*:<strong></p>", unsafe_allow_html=True)
     #st.write(f"**General Information about '{prediction}'**")
-    user_message = f"Please provide general information, causes, specific remedies, and where they appear for '{prediction}' and limit output to 150 words. Please include a sentence that mentions in some way that the model uses image detection and to check out some disease similar to '{prediction}' of your knowledge that look similar."
+    user_message = f"Please provide general information, causes, specific remedies, and where they appear for '{prediction}' in 130-150 words. In less than 30 words, please include a sentence that mentions in some way that the model uses image detection and isn't perfect so they should also check out some diseases similar to '{prediction}' of your knowledge that look similar and may get confused by the model."
     messages = [
         {"role": "system", "content": "You are an intelligent assistant."},
         {"role": "user", "content": user_message}
