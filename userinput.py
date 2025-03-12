@@ -15,7 +15,7 @@ def get_user_input():
 
   if submit_button:
       if uploaded_file is not None:
-          st.image(uploaded_file, caption='Uploaded Image.', use_column_width=True)
+          st.image(uploaded_file, caption='Uploaded Image.', use_container_width=True)
           uploaded_file = Image.open(uploaded_file)
           uploaded_file = uploaded_file.save("image.jpg")
 #          OpenCv Read
