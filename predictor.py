@@ -10,7 +10,12 @@ import torch.nn as nn
 # ... your existing code ...
 
 torch.serialization.add_safe_globals([models.resnet.ResNet])
-torch.serialization.add_safe_globals([nn.Conv2d, nn.Linear, nn.ReLU, nn.MaxPool2d, nn.BatchNorm2d, nn.Sequential])
+#torch.serialization.add_safe_globals([nn.Conv2d, nn.Linear, nn.ReLU, nn.MaxPool2d, nn.BatchNorm2d, nn.Sequential])
+torch.serialization.add_safe_globals([
+    models.resnet.BasicBlock,  # ResNet block
+    models.resnet.Bottleneck,  # ResNet bottleneck block
+    nn.Conv2d, nn.Linear, nn.ReLU, nn.MaxPool2d, nn.BatchNorm2d, nn.Sequential, nn.Dropout, nn.AdaptiveAvgPool2d
+])
 # print(categories[pred])
 def make_prediction(input_image):
   #myModel = torch.load('DiseaseDetectionEpoch73.pth')
