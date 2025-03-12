@@ -1,13 +1,14 @@
 
 
 import torch
+import torchvision.models as models
 import cv2
 import numpy as np
 from joblib import load
 import streamlit as st
 # ... your existing code ...
 
-torch.serialization.add_safe_globals([ResNet])
+torch.serialization.add_safe_globals([models.resnet.ResNet]])
 # print(categories[pred])
 def make_prediction(input_image):
   #myModel = torch.load('DiseaseDetectionEpoch73.pth')
