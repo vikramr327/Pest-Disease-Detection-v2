@@ -1,21 +1,18 @@
+
+%%writefile predictor.py
 import torch
 import cv2
 import numpy as np
 from joblib import load
 import streamlit as st
+# ... your existing code ...
 
-# ... your existing code ..
+
 # print(categories[pred])
 def make_prediction(input_image):
-  myModel = torch.load('DiseaseDetectionEpoch73.pth', map_location=torch.device('cpu'))
-
-  # Initialize model
- # ✅ Correct way to load
-
-  
-
+  myModel = load('DiseaseDetectionEpoch7.joblib')
   #myModel.eval()  # Set model to evaluation mode #temp
-  #st.write ("Model uploaded!") # You may remove this in your finalized web app!
+#  st.write ("Model uploaded!") # You may remove this in your finalized web app!
   input_resized = cv2.resize(input_image, (128, 128))
   input_resized = np.swapaxes(input_resized, 0,2)
   input_resized = np.swapaxes(input_resized, 1,2)
@@ -35,7 +32,7 @@ def make_prediction(input_image):
   pred = np.argmax(pred.cpu().detach().numpy())
   # Output the predicted class
   #st.write(input_tensor)  # Check the preprocessed input tensor
-  #st.write(f"Predicted class: {pred}")
+  st.write(f"Predicted class: {pred}")
 
   categories = ['Cashew anthracnose', 'Cashew gumosis', 'Cashew healthy',
   'Cashew leaf miner', 'Cashew red rust', 'Cassava bacterial blight',
