@@ -9,9 +9,9 @@ from model_definition import MyModel
 
 # print(categories[pred])
 def make_prediction(input_image):
-#  myModel = torch.load('DiseaseDetectionEpoch73.pth', map_location=torch.device('cpu'))
+  myModel = torch.load('DiseaseDetectionEpoch73.pth', map_location=torch.device('cpu'))
   # Initialize model
-  myModel.load_state_dict(torch.load('DiseaseDetectionEpoch73.pth', map_location=torch.device('cpu')))  # ✅ Correct way to load
+ # ✅ Correct way to load
 
   
 
