@@ -10,7 +10,7 @@ import streamlit as st
 # print(categories[pred])
 def make_prediction(input_image):
  # myModel = torch.load('DiseaseDetectionEpoch73.pth', map_location=torch.device('cpu'))
- myModel = model.load_state_dict(torch.load('DiseaseDetectionEpoch73.pth', map_location=torch.device('cpu')))
+  model.load_state_dict(torch.load('DiseaseDetectionEpoch73.pth', map_location=torch.device('cpu')))
   # Initialize model
  # ✅ Correct way to load
 
