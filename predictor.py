@@ -14,7 +14,7 @@ torch.serialization.add_safe_globals([nn.Conv2d, nn.Linear, nn.ReLU, nn.MaxPool2
 # print(categories[pred])
 def make_prediction(input_image):
   #myModel = torch.load('DiseaseDetectionEpoch73.pth')
-  myModel = torch.load("DiseaseDetectionEpoch73.pth")
+  myModel = torch.load("DiseaseDetectionEpoch73.pth", map_location=torch.device('cpu'))
   #myModel.eval()  # Set model to evaluation mode #temp
 #  st.write ("Model uploaded!") # You may remove this in your finalized web app!
   input_resized = cv2.resize(input_image, (128, 128))
