@@ -8,7 +8,7 @@ from joblib import load
 import streamlit as st
 # ... your existing code ...
 
-torch.serialization.add_safe_globals([models.resnet.ResNet]])
+torch.serialization.add_safe_globals([models.resnet.ResNet])
 # print(categories[pred])
 def make_prediction(input_image):
   #myModel = torch.load('DiseaseDetectionEpoch73.pth')
