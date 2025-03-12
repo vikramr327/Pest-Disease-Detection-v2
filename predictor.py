@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 from joblib import load
 import streamlit as st
-from model_definition import MyModel 
+
 # ... your existing code ...
 
 
